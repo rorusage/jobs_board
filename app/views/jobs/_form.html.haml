@@ -1,7 +1,5 @@
 .col-md-12.text-center
-  - @jobs.each do |j|
+  - jobs.each do |j|
     %h1= link_to(j.job_type, job_path(j))
     %h4= j.company
     %hr
-
-

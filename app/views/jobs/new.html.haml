@@ -1,0 +1,12 @@
+.col-md-4.col-md-offset-4
+  %h1 新增工作
+  %hr
+
+  = simple_form_for @job do |f|
+    .form-group
+      = f.input :job_class, collection: ["full-time", "part-time", "freelance", "remote"]
+      = f.input :job_type, input_html: {class: "form-control"}
+      = f.input :company, input_html: {class: "form-control"}
+      = f.input :description, input_html: {class: "form-control"}
+      = f.input :link, input_html: {class: "form-control"}
+    = f.submit "Submit", class: "btn btn-primary", data: {disable_with: "Submitting..."}
